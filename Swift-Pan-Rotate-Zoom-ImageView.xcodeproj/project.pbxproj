@@ -14,6 +14,7 @@
 		D28637BC19EEF573003B99CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28637BA19EEF573003B99CB /* LaunchScreen.xib */; };
 		D28637C819EEF573003B99CB /* Swift_Pan_Rotate_Zoom_ImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28637C719EEF573003B99CB /* Swift_Pan_Rotate_Zoom_ImageViewTests.swift */; };
 		D28637D219EEF663003B99CB /* SOXPanRotateZoomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28637D119EEF663003B99CB /* SOXPanRotateZoomImageView.swift */; };
+		D28637D419EEF98F003B99CB /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D28637D319EEF98F003B99CB /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D28637C619EEF573003B99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28637C719EEF573003B99CB /* Swift_Pan_Rotate_Zoom_ImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Pan_Rotate_Zoom_ImageViewTests.swift; sourceTree = "<group>"; };
 		D28637D119EEF663003B99CB /* SOXPanRotateZoomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOXPanRotateZoomImageView.swift; sourceTree = "<group>"; };
+		D28637D319EEF98F003B99CB /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				D28637B519EEF573003B99CB /* Main.storyboard */,
 				D28637B819EEF573003B99CB /* Images.xcassets */,
 				D28637BA19EEF573003B99CB /* LaunchScreen.xib */,
+				D28637D319EEF98F003B99CB /* screenshot.png */,
 				D28637AF19EEF573003B99CB /* Supporting Files */,
 			);
 			path = "Swift-Pan-Rotate-Zoom-ImageView";
@@ -198,6 +201,7 @@
 				D28637B719EEF573003B99CB /* Main.storyboard in Resources */,
 				D28637BC19EEF573003B99CB /* LaunchScreen.xib in Resources */,
 				D28637B919EEF573003B99CB /* Images.xcassets in Resources */,
+				D28637D419EEF98F003B99CB /* screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				D28637CD19EEF573003B99CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D28637CE19EEF573003B99CB /* Build configuration list for PBXNativeTarget "Swift-Pan-Rotate-Zoom-ImageViewTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				D28637D019EEF573003B99CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
