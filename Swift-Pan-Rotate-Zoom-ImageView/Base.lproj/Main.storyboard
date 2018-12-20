@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6wV-y8-xUy">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6wV-y8-xUy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,23 +18,23 @@
                         <viewControllerLayoutGuide type="bottom" id="dxr-sZ-eeK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yg1-tq-QFq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fm5-s3-6Id">
-                                <rect key="frame" x="276" y="550" width="48" height="30"/>
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KQ0-cl-2CN"/>
                                 </constraints>
                                 <state key="normal" title="Spawn">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="spawnPressed:" destination="6wV-y8-xUy" eventType="touchUpInside" id="gCh-iw-2cf"/>
+                                    <action selector="spawnPressedWithSender:" destination="6wV-y8-xUy" eventType="touchUpInside" id="ysh-g8-vDO"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fm5-s3-6Id" secondAttribute="centerX" id="DQ8-1z-CeK"/>
                             <constraint firstItem="dxr-sZ-eeK" firstAttribute="top" secondItem="fm5-s3-6Id" secondAttribute="bottom" constant="20" id="xCW-IU-ZnG"/>
