@@ -24,7 +24,7 @@ import UIKit
 
 class SOXPanRotateZoomImageView: UIImageView, UIGestureRecognizerDelegate {
  
-    var previousLocation = CGPointZero
+    var previousLocation = CGPoint.zero
     
     override init(image: UIImage!) {
         super.init(image: image)
@@ -32,7 +32,7 @@ class SOXPanRotateZoomImageView: UIImageView, UIGestureRecognizerDelegate {
     }
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         self.initialSetup()
     }
     
@@ -42,43 +42,43 @@ class SOXPanRotateZoomImageView: UIImageView, UIGestureRecognizerDelegate {
     }
     
     func initialSetup() {
-        self.userInteractionEnabled = true
+        self.isUserInteractionEnabled = true
         
-        let rotationRecognizer = UIRotationGestureRecognizer(target: self, action: Selector("handleRotation:"))
+        let rotationRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation(_:)))
         rotationRecognizer.delegate = self
         self.addGestureRecognizer(rotationRecognizer)
         
-        let panRecognizer = UIPanGestureRecognizer(target: self, action: Selector("handlePan:"))
+        let panRecognizer = UIPanGestureRecognizer(target: self, action:  #selector(handlePan(_:)))
         panRecognizer.delegate = self
         self.addGestureRecognizer(panRecognizer)
         
-        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action: Selector("handlePinch:"))
+        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
         pinchRecognizer.delegate = self
         self.addGestureRecognizer(pinchRecognizer)
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.superview?.bringSubviewToFront(self)
         previousLocation = self.center
     }
     
-    func handleRotation(gesture: UIRotationGestureRecognizer) {
-        gesture.view!.transform = CGAffineTransformRotate(gesture.view!.transform, gesture.rotation);
+    @objc func handleRotation(_ gesture: UIRotationGestureRecognizer) {
+        gesture.view!.transform = gesture.view!.transform.rotated(by: gesture.rotation);
         gesture.rotation = 0;
     }
     
-    func handlePan(gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translationInView(self.superview!)
-        let newPosition = CGPointMake(previousLocation.x + translation.x, previousLocation.y + translation.y)
+    @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: self.superview!)
+        let newPosition = CGPoint(x: previousLocation.x + translation.x, y: previousLocation.y + translation.y)
         self.center = newPosition
     }
     
-    func handlePinch(gesture: UIPinchGestureRecognizer) {
-        gesture.view!.transform = CGAffineTransformScale(gesture.view!.transform, gesture.scale, gesture.scale);
+    @objc func handlePinch(_ gesture: UIPinchGestureRecognizer) {
+        gesture.view!.transform = gesture.view!.transform.scaledBy(x: gesture.scale, y: gesture.scale);
         gesture.scale = 1;
     }
     
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
